@@ -12,4 +12,5 @@ Vulnerabilities
 Permission Changes
 - Since the application only needs to access the internet, I removed all permissions except for the Internet access permission. 
   - Location Access was used to support multiple languages within the application. Since the backend service only supports English there is no need to support this functionality. 
-  - It looks like the application was attempting to use SMS to automatically spell check received text messages. I see this as a vulnerability because it means that received messages would be sent automatically to an external service, which could be a major breach of privacy. I've removed all instances of SMSReceiver from the application.
+  - It looks like the application was attempting to use SMS to automatically spell check received text messages. I see this as a vulnerability because it means that received messages would be sent automatically to an external service, which could be a major breach of privacy. I've removed all instances of SMSReceiver from the application. I did attempt to test the functionality by creating two emulators and sending texts between them, but wasn't able to get this working in the original version of the code.
+  - 
